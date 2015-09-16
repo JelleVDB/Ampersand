@@ -50,40 +50,6 @@ footer {
     height: 75px;
 }
 
-.photoBanner{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    clear: both;
-}
-
-.fadeBoxPhoto {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1920px;
-    height: 550px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%,  rgba(0, 0, 0, 1)) 25%;
-    float: left;
-}
-
-
-
-.newsbox{
-    margin-top: 560px;
-    margin-left: 50px;
-}
-
-.fadeBoxIndex {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1920px;
-    height: 475px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%,  rgba(0, 0, 0, 1)) 25%;
-    float: left;
-}
-
 
 .socialmedia{
     text-align: center;
@@ -92,21 +58,13 @@ footer {
 
 .content{
     width: 80%;
-    margin: 30px auto;
+    margin: 30px auto -30px;
     padding-bottom: 85px; /*height of the footer*/
 }
 
 .bandFoto{
     margin-left: 10px;
     margin-bottom: 10px;
-}
-
-.biotext{
-    margin-top: 560px;
-    width: 1000px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
 }
 
 #events{
@@ -118,37 +76,24 @@ footer {
     color: #8a8a8a;
 }
 
-/* Carousel base class */
-.carousel {
-    height: 500px;
-    margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-    z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-    height: 400px;
-    background-color: #777;
-}
-.carousel-inner > .item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-}
-
-.albums{
-    margin-top: 50px;
-}
-
 .pictures{
 }
 
 .pictures a, .albums a{
     text-decoration: none;
+}
+
+.albums{
+    position: relative;
+    margin-top: 30px;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+.picturepage{
+    max-width: 1020px;
 }
 
 .album{
@@ -212,7 +157,20 @@ footer {
 @media all and (min-width: 766px){
     /** GENERAL */
 
+    body{
+        overflow-y: scroll;
+    }
+
+    #container{
+        width: 100%;
+    }
+
+
     /** HEADER */
+    header{
+        width: 100%;
+    }
+
     .rmm ul{
         width: 780px;
     }
@@ -246,6 +204,39 @@ footer {
         line-height: 1.2em;
         margin: 1.2em 0 0 -2px;
     }
+
+    .photoBanner{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        clear: both;
+    }
+
+    .newsbox a img{
+        position: relative;
+        margin-top : 35%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .biotext{
+        margin-top: 35%;
+        max-width: 100%;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    .audioWrapper {
+         width: 60%;
+         max-width: 700px;
+
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         /* bring your own prefixes */
+         transform: translate(-50%, -50%);
+     }
 }
 
 
@@ -255,26 +246,24 @@ footer {
 @media all and (max-width: 765px){
     /** GENERAL */
 
+    #container{
+        min-height: 75%;
+    }
+
+
     /** HEADER */
     .rmm ul{
         width: auto;
     }
 
     /** CONTENT */
+
     .content{
 
     }
 
-    /** CAROUSEL */
-    .carousel{
-        height: 250px;
-        position: static;
-    }
-    .carousel .item {
-        height: 250px;
-    }
-    .carousel-inner > .item > img {
-        height: 250px;
+    .bannercontent{
+        width: 100%;
     }
 
 
@@ -297,7 +286,42 @@ footer {
         line-height: 1.2em;
         margin: 1.2em 0 1em -2px;
     }
+
+    .photoBanner{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        clear: both;
+    }
+
+    .newsbox a img{
+        padding: 30px;
+    }
+
+    .biotext{
+        margin: 30px;
+        width: 80%;
+
+
+
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+
+    /** MOBILE SPECIAL FOR GIG PAGE **/
+    @media all and (max-width: 525px){
+
+        #events{
+            margin-left: -30px;
+        }
+    }
 }
+
+
+
 
 
 

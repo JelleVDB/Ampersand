@@ -19,6 +19,9 @@
     <script type="text/javascript" src="script/lightbox.js"></script>
 </head>
 <body>
+<?php
+require('script/imageLoader.php')
+?>
 <!--http://placehold.it/format(xformat)/background/textcolor&text=tekst-->
 <div id="container">
     <header>
@@ -34,8 +37,14 @@
             </ul>
         </div>
     </header>
-    <div class="content">
-        <h1>Pictures</h1>
+    <div class="content picturepage">
+        <a class="picsreturn" href="pics.php">< Back</a>
+        <div class="pictures">
+            <?php
+            readImages("Album4");
+            ?>
+        </div>
+
     </div>
     <div class="modal fade" id="contact" role="dialog">
         <div class="modal-dialog">

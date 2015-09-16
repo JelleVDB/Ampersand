@@ -37,11 +37,11 @@ require('script/imageLoader.php')
             </ul>
         </div>
     </header>
-    <div class="content">
+    <div class="content picturepage">
         <a class="picsreturn" href="pics.php">< Back</a>
         <div class="pictures">
             <?php
-            readImages("Concert3");
+            readImages("Album1");
             ?>
         </div>
 

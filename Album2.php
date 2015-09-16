@@ -38,9 +38,10 @@ require('script/imageLoader.php')
         </div>
     </header>
     <div class="content picturepage">
-        <div class="albums">
+        <a class="picsreturn" href="pics.php">< Back</a>
+        <div class="pictures">
             <?php
-                readAlbum();
+            readImages("Album2");
             ?>
         </div>
 
